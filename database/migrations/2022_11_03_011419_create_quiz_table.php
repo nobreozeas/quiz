@@ -20,9 +20,6 @@ return new class extends Migration
             $table->string('questao_3');
             $table->string('questao_4');
             $table->string('questao_5');
-            $table->unsignedBigInteger('id_usuario');
-            $table->foreign('id_usuario')->references('id')->on('users');
-            $table->timestamps();
         });
     }
 

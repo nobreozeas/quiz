@@ -1,20 +1,9 @@
 @extends('layouts.app')
 
 <style>
-    .loading {
-        background-color: rgba(128, 128, 240, 0.514);
-        z-index: 99999999;
-        width: 100vw;
-        height: 100vh;
-    }
 
 </style>
 @section('content')
-    <div class="loading d-flex">
-
-    </div>
-
-
     <div class="container">
         <div class="bg mt-4">
             <div class="row">
@@ -24,7 +13,6 @@
                         <h5 class="text-center">Com que profissional de TI você se parece?</h5>
                     </div>
                 </div>
-
             </div>
             <div class="row">
                 <div class="col">
@@ -33,7 +21,6 @@
                             width="350">
                     </div>
                 </div>
-
             </div>
 
             <div class="row">
@@ -45,15 +32,7 @@
             </div>
         </div>
     </div>
-
     @push('js')
-        <script>
-            $(document).ready(function() {
-                setTimeout(function() {
-                    $('.loading').hide();
-                }, 2000)
 
-            })
-        </script>
     @endpush
 @endsection

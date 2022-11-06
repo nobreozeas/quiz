@@ -383,31 +383,31 @@ $(document).ready(function() {
     $('#btn5').attr("disabled", true)
 
     $('body').on('change', 'input[name=questao1]', function(){
-        console.log($(this))
+
         if($(this).length != 0){
             $('#btn1').attr("disabled", false)
         }
     })
     $('body').on('change', 'input[name=questao2]', function(){
-        console.log($(this))
+
         if($(this).length != 0){
             $('#btn2').attr("disabled", false)
         }
     })
     $('body').on('change', 'input[name=questao3]', function(){
-        console.log($(this))
+
         if($(this).length != 0){
             $('#btn3').attr("disabled", false)
         }
     })
     $('body').on('change', 'input[name=questao4]', function(){
-        console.log($(this))
+
         if($(this).length != 0){
             $('#btn4').attr("disabled", false)
         }
     })
     $('body').on('change', 'input[name=questao5]', function(){
-        console.log($(this))
+
         if($(this).length != 0){
             $('#btn5').attr("disabled", false)
         }
@@ -429,6 +429,11 @@ $(document).ready(function() {
         $('#q4').hide();
         $('#q5').show('slow');
     })
+
+
+
+
+
 
 });
 </script>

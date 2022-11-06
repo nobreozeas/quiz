@@ -36,15 +36,17 @@ class QuizController extends Controller
      */
     public function store(Request $request)
     {
-
         $quiz = Quiz::create([
             'questao_1' => $request->questao1,
             'questao_2' => $request->questao2,
             'questao_3' => $request->questao3,
             'questao_4' => $request->questao4,
-            'questao_5' => $request->questao5,
-            'id_usuario' => 1
+            'questao_5' => $request->questao5
         ]);
+
+        if($quiz){
+            return view('sucesso');
+        }
     }
 
     /**
@@ -53,9 +55,11 @@ class QuizController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        $quiz = Quiz::orderBy('id', 'DESC')->first();
+
+        return json_encode($quiz);
     }
 
     /**
@@ -91,4 +95,5 @@ class QuizController extends Controller
     {
         //
     }
+
 }

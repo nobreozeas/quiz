@@ -23,4 +23,8 @@ body{
     color: #fff;
 }
 
+.fogos{
+    background: url('../images/fogos.gif') no-repeat center bottom;
+    background-size: cover;
+}
 

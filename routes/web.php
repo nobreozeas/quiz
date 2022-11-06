@@ -18,4 +18,5 @@ Route::get('/', function(){
 })->name('inicio');
 Route::get('/quiz', [QuizController::class, 'create'])->name('quiz');
 Route::post('/quiz/novo', [QuizController::class, 'store'])->name('adiciona_quiz');
-
+Route::post('/sucesso/contato', [QuizController::class, 'contato'])->name('contato');
+Route::get('/show', [QuizController::class, 'show'])->name('mostra_quiz');
